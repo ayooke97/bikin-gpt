@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+            </div>
+            <nav class="chat-history">
+                <div class="history-header">
+                    <h2>Chat History</h2>
+                    <button id="clear-history" class="icon-button" title="Clear all history">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="history-list">
+                    <!-- Chat history will be populated here -->
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="chat-header">
+                <h1>ChatGPT Clone</h1>
+                <div class="header-controls">
+                    <button id="theme-toggle" class="icon-button" title="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="settings-dropdown">
+                        <button id="settings-toggle" class="icon-button" title="Settings">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <div class="settings-menu">
+                            <div class="settings-section">
+                                <h3>Theme</h3>
+                                <div class="theme-options">
+                                    <label>
+                                        <input type="radio" name="theme" value="light"> Light
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="theme" value="dark"> Dark
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="theme" value="system"> System
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-section">
+                                <h3>Accent Color</h3>
+                                <div class="color-options">
+                                    <button class="color-option" data-color="#10a37f" style="background-color: #10a37f;"></button>
+                                    <button class="color-option" data-color="#1a73e8" style="background-color: #1a73e8;"></button>
+                                    <button class="color-option" data-color="#7c3aed" style="background-color: #7c3aed;"></button>
+                                    <button class="color-option" data-color="#e11d48" style="background-color: #e11d48;"></button>
+                                </div>
+                            </div>
+                            <div class="settings-section">
+                                <button id="logout-button" class="logout-button">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="chat-container">
+                <div class="messages" id="messages">
+                    <!-- Messages will be populated here -->
+                </div>
+
+                <footer class="input-container">
+                    <form id="message-form">
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="user-input" 
+                                placeholder="Type your message here..." 
+                                rows="1"
+                                autofocus
+                            ></textarea>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </footer>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
